@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harshith Bhookya - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">  
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+<!-- Navigation -->
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <span>HB</span>
+    </div>
+    <ul class="nav-menu">
+      <li><a href="#home" class="nav-link">Home</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#skills" class="nav-link">Skills</a></li>
+      <li><a href="#projects" class="nav-link">Projects</a></li>
+      <li><a href="#certifications" class="nav-link">Certifications</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="hamburger" onclick="toggleMobileMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  </div>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home" onclick="closeMobileMenu()">Home</a>
+    <a href="#about" onclick="closeMobileMenu()">About</a>
+    <a href="#skills" onclick="closeMobileMenu()">Skills</a>
+    <a href="#projects" onclick="closeMobileMenu()">Projects</a>
+    <a href="#certifications" onclick="closeMobileMenu()">Certifications</a>
+    <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+  </div>
+</nav>
+
+<script>
+function toggleMobileMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.classList.toggle("active");
+}
+
+function closeMobileMenu() {
+  const menu = document.getElementById("mobileMenu");
+  menu.classList.remove("active");
+}
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+  const menu = document.getElementById("mobileMenu");
+  const hamburger = document.querySelector('.hamburger');
+  const isClickInsideMenu = menu.contains(event.target);
+  const isClickOnHamburger = hamburger.contains(event.target);
+  
+  if (!isClickInsideMenu && !isClickOnHamburger && menu.classList.contains("active")) {
+    menu.classList.remove("active");
+  }
+});
+</script>
+    <!-- Home Section -->
+    <section id="home" class="hero">
+  <div class="hero-content">
+    <div class="hero-layout">
+      <div class="hero-text">
+        <h1 class="hero-name">Harshith Bhookya</h1>
+        <h2 class="hero-title">Aspiring Software Engineer</h2>
+        <h2 class="hero-subtitle">Full Stack Developer & Machine Learning Developer</h2>
+        <p class="hero-tagline">
+          Passionate about creating innovative solutions through code. Building
+          the future, one project at a time.
+        </p>
+      </div>
+      <div class="hero-image">
+        <div class="profile-placeholder">
+          <img src="photo.png" alt="Profile Photo" class="profile-photo" />
+        </div>
+      </div>
+    </div>
+    <div class="hero-buttons">
+      <a href="#contact" class="btn btn-primary">Get In Touch</a>
+      <a href="Bhookya_Harshith_Resume.pdf" class="btn btn-secondary" download>
+        <i class="fas fa-download"></i>
+        Download Resume
+      </a>
+    </div>
+  </div>
+</section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate computer science student with a love for problem-solving and creating innovative solutions. My journey in software development began with curiosity about how things work, and has evolved into a dedicated pursuit of excellence in full-stack development.</p>
+                    <div class="about-tags">
+                        <span class="tag">Problem Solver</span>
+                        <span class="tag">Communication</span>
+                        <span class="tag">Quick Learner</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ <section id="skills" class="skills-section">
+    <div class="bg-decoration bg-decoration-1"></div>
+    <div class="bg-decoration bg-decoration-2"></div>
+
+    <div class="container">
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-grid">
+            <!-- Skill Items -->
+             <div class="skill-item cpp">
+                <div class="skill-icon">
+                    <i class="fas fa-terminal"></i>
+                </div>
+                <h3 class="skill-name">C++</h3>
+            </div>
+            <div class="skill-item python">
+                <div class="skill-icon">
+                    <i class="fab fa-python"></i>
+                </div>
+                <h3 class="skill-name">Python</h3>
+            </div>
+
+            <div class="skill-item html">
+                <div class="skill-icon">
+                    <i class="fab fa-html5"></i>
+                </div>
+                <h3 class="skill-name">HTML</h3>
+            </div>
+            <div class="skill-item css">
+                <div class="skill-icon">
+                    <i class="fab fa-css3-alt"></i>
+                </div>
+                <h3 class="skill-name">CSS</h3>
+            </div>
+
+            <div class="skill-item javascript">
+                <div class="skill-icon">
+                    <i class="fab fa-js-square"></i>
+                </div>
+                <h3 class="skill-name">JavaScript</h3>
+            </div>
+
+            <div class="skill-item react">
+                <div class="skill-icon">
+                    <i class="fab fa-react"></i>
+                </div>
+                <h3 class="skill-name">React</h3>
+            </div>
+
+            <div class="skill-item nodejs">
+                <div class="skill-icon">
+                    <i class="fab fa-node-js"></i>
+                </div>
+                <h3 class="skill-name">Node.js</h3>
+            </div>
+
+            <div class="skill-item mongodb">
+                <div class="skill-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3 class="skill-name">MongoDB</h3>
+            </div>
+
+            <div class="skill-item mysql">
+                <div class="skill-icon">
+                    <i class="fas fa-database"></i>
+                </div>
+                <h3 class="skill-name">MySQL</h3>
+            </div>
+            <div class="skill-item aws">
+                <div class="skill-icon">
+                    <i class="fab fa-aws"></i>
+                </div>
+                <h3 class="skill-name">AWS</h3>
+            </div>
+
+            <div class="skill-item git">
+                <div class="skill-icon">
+                    <i class="fab fa-git-alt"></i>
+                </div>
+                <h3 class="skill-name">Git</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+  <div class="container">
+    <h2 class="section-title">Featured Projects</h2>
+    <div class="projects-grid">
+
+      <!-- Project 1 -->
+      <div class="project-card">
+        <div class="project-image">
+          <div class="project-title-overlay">Food Sense Application</div>
+          <div class="project-overlay"></div>
+          <img src="projects/food.png" alt="E-Commerce Project" class="project-img" />
+          <div class="project-links">
+            <a href="https://github.com/harshithnayak1506/FoodSense-Application" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://food-sense-emge.vercel.app/" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Food Sense Application</h3>
+          <p>Developed a full-stack web application using Next.js with integrated machine learning for 
+personalized health and dietary guidance. </p>
+          <div class="project-tech">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Next JS</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">CatBoost</span>
+            <span class="tech-tag">Flask</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2 -->
+      <div class="project-card">
+        <div class="project-image">
+          <div class="project-title-overlay">Elearning Platform Management</div>
+          <div class="project-overlay"></div>
+          <img src="projects/elearning.png" alt="AI Task Manager" class="project-img" />
+          <div class="project-links">
+            <a href="https://github.com/harshithnayak1506/ElearningPlatform" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="https://elearning-platform-frontend.vercel.app/" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+          </div>
+        </div>
+        <div class="project-content">
+          <h3 class="project-title">Elearning Platform Management</h3>
+          <p>Designed Elearning Platform system using Python, ReactJS, and OpenAI to streamline online education. </p>
+          <div class="project-tech">
+            <span class="tech-tag">React JS</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">GeminiAI</span>
+            <span class="tech-tag">OpenCV</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">Stripe</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3 -->
+      <div class="project-card">
+        <div class="project-image">
+          <div class="project-title-overlay">Expense Management System</div>
+          <div class="project-overlay"></div>
+          <img src="projects/expense.png" alt="Weather Dashboard" class="project-img" />
+          <div class="project-links">
+            <a href="https://github.com/harshithnayak1506/ExpenseManagement" class="project-link"><i class="fab fa-github"></i> GitHub</a>
+            <a href="#" class="project-link no-demo"><i class="fas fa-external-link-alt"></i> Demo</a>
+          </div>
+        </div>
+        <div class="project-content">
+          <div id="coming-soon-toast" class="coming-soon-toast">🚧 Coming Soon!!!</div>
+          <h3 class="project-title">Expense Management System</h3>
+          <p>The system that help users efficiently track, manage, and analyze their
+daily and monthly expenditures.</p>
+          <div class="project-tech">
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">Express</span>
+            <span class="tech-tag">ReactJS</span>
+            <span class="tech-tag">NodeJS</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll('.no-demo').forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const toast = document.getElementById('coming-soon-toast');
+      toast.classList.add('show');
+      setTimeout(() => {
+        toast.classList.remove('show');
+      }, 3000); // Hide after 3 seconds
+    });
+  });
+</script>
+
+
+
+
+    <!-- Certifications Section -->
+   <section id="certifications" class="certifications">
+  <div class="container">
+    <h2 class="section-title">Certifications</h2>
+    <div class="certifications-grid">
+      <div class="certification-card" data-image="certificates/Oracle Generative.jpg" data-title="Oracle Cloud Infrastructure 2025 Certified Generative AI Professional">
+        <div class="certification-icon"><img src="certificates/OCI25GAIOCP.jpg" alt="Logo"></div>
+        <div class="certification-content">
+          <h3>Oracle Generative AI 2025 Certified</h3>
+          <p class="certification-issuer">Oracle University</p>
+          <p class="certification-date">2025</p>
+        </div>
+        <button class="view-btn">View</button>
+      </div>
+      <div class="certification-card" data-image="certificates/Oracle.jpg" data-title="Oracle Cloud Infrastructure 2025 Certified AI Foundations Associate">
+        <div class="certification-icon"><img src="certificates/OCI25AICFA.jpeg" alt="Logo"></div>
+        <div class="certification-content">
+          <h3>Oracle Cloud Infrastructure 2025 Certified</h3>
+          <p class="certification-issuer">Oracle University</p>
+          <p class="certification-date">2025</p>
+        </div>
+        <button class="view-btn">View</button>
+      </div>
+      <!-- Certification 1 -->
+      <div class="certification-card" data-image="certificates/LLM.jpg" data-title="Certification in Introduction to Large Language Models">
+        <div class="certification-icon"><img src="certificates\nptel.jpg" alt="Logo"></div>
+        <div class="certification-content">
+          <h3>Introduction to Large Language Models</h3>
+          <p class="certification-issuer">NPTEL CERTIFICATION</p>
+          <p class="certification-date">2025</p>
+        </div>
+        <button class="view-btn">View</button>
+      </div>
+
+      <div class="certification-card" data-image="certificates/DSA.png" data-title="Data Structures and Algorithms">
+        <div class="certification-icon"><img src="certificates\smartinterviews.jpeg" alt="Logo"></div>
+        <div class="certification-content">
+          <h3>Data Structures and Algorithms</h3>
+          <p class="certification-issuer">Smart Interviews</p>
+          <p class="certification-date">2024</p>
+        </div>
+        <button class="view-btn">View</button>
+      </div>
+
+      <!-- Certification 2 -->
+      <div class="certification-card" data-image="certificates/C++.jpg" data-title="Certification in Programming in Modern C++">
+        <div class="certification-icon"><img src="certificates\nptel.jpg" alt="Logo"></div>
+        <div class="certification-content">
+          <h3>Programming in Modern C++</h3>
+          <p class="certification-issuer">NPTEL CERTIFICATION</p>
+          <p class="certification-date">2024</p>
+        </div>
+        <button class="view-btn">View</button>
+      </div>
+      <!-- Certification 4 -->
+      <div class="certification-card" data-image="certificates/ML.jpg" data-title="Certification in Machine Learning">
+        <div class="certification-icon"><img src="certificates\simplilearn.png" alt="Logo"></i></div>
+        <div class="certification-content">
+          <h3>Machine Learning Certified</h3>
+          <p class="certification-issuer">Simpli Learn</p>
+          <p class="certification-date">2024</p>
+        </div>
+        <button class="view-btn">View</button>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+  <!-- Modal -->
+  <div id="certificate-modal">
+    <div class="modal-content">
+      <button id="close-modal">&times;</button>
+      <h3 id="modal-title"></h3>
+      <div class="certificate-wrapper">
+        <img src="" alt="Certificate" id="modal-image" />
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+  const modal = document.getElementById("certificate-modal");
+  const modalImage = document.getElementById("modal-image");
+  const modalTitle = document.getElementById("modal-title");
+  const closeModal = document.getElementById("close-modal");
+
+  // When user clicks on "View" button
+  document.querySelectorAll(".view-btn").forEach(button => {
+    button.addEventListener("click", (e) => {
+      const card = e.target.closest(".certification-card");
+      const imageSrc = card.getAttribute("data-image");
+      const title = card.getAttribute("data-title");
+
+      // Set image and title
+      modalImage.src = imageSrc;
+      modalTitle.textContent = title;
+
+      // Show modal
+      modal.style.display = "flex";
+
+      // ✅ Hide background scroll
+      document.body.style.overflow = "hidden";
+    });
+  });
+
+  // When close button is clicked
+  closeModal.addEventListener("click", () => {
+    closeModalModal();
+  });
+
+  // When clicking outside modal content
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      closeModalModal();
+    }
+  });
+
+  // ✅ Reusable close function
+  function closeModalModal() {
+    modal.style.display = "none";
+    modalImage.src = "";
+    modalTitle.textContent = "";
+
+    // ✅ Restore background scroll
+    document.body.style.overflow = "auto";
+  }
+</script>
+
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect</h3>
+                    <p>I'm always open to discussing new opportunities, interesting projects, or just having a chat about technology.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>harshithnayak154@gmail.com</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-linkedin"></i>
+                            </div>
+                            <div>
+                                <h4>LinkedIn</h4>
+                                <p>linkedin.com/in/harshith-bhookya</p>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fab fa-github"></i>
+                            </div>
+                            <div>
+                                <h4>GitHub</h4>
+                                <p>github.com/harshithnayak1506</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary" id="send-btn">
+  <span id="btn-text">Send Message</span>
+  <span id="btn-loader" class="loader" style="display: none;"></span>
+</button>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    <script src="script.js"></script>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="social-links">
+                    <a href="https://linkedin.com/in/harshith-bhookya"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/harshithnayak1506"><i class="fab fa-github"></i></a>
+                    <a href="harshithnayak154@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+                <p>&copy; 2025 Harshith Bhookya. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <div id="toast" class="toast hidden"></div>
+</body>
+</html>
